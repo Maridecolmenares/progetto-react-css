@@ -1,12 +1,25 @@
-# React + Vite
+# Eseguire il Progetto in Locale
+Per avviare questo progetto sul tuo computer, segui questi passaggi:
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Naviga nella cartella del progetto
+Apri il terminale e spostati all'interno della cartella che è stata creata. Sostituisci <nome-progetto> con il nome che hai dato al tuo progetto.
 
-Currently, two official plugins are available:
+```bash
+cd <nome-progetto>
+```
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# Installa le dipendenze
+Esegui questo comando per scaricare e installare tutte le librerie necessarie (come React e Vite) definite nel file package.json.
 
-## Expanding the ESLint configuration
+```bash
+npm install
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+# Avvia il server di sviluppo
+Una volta completata l'installazione, lancia il server di sviluppo locale.
+
+``` bash
+npm run dev
+```
+
+A questo punto, il terminale ti mostrerà un indirizzo locale (solitamente http://localhost:5173). Apri questo link nel tuo browser per vedere l'applicazione in funzione, con aggiornamenti istantanei durante lo sviluppo. Non c'è bisogno quindi di lanciare live server.
