@@ -23,3 +23,5 @@ npm run dev
 ```
 
 A questo punto, il terminale ti mostrerà un indirizzo locale (solitamente http://localhost:5173). Apri questo link nel tuo browser per vedere l'applicazione in funzione, con aggiornamenti istantanei durante lo sviluppo. Non c'è bisogno quindi di lanciare live server.
+
+Il progetto finale è visibile su https://resilient-travesseiro-112373.netlify.app/
