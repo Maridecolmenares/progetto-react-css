@@ -1,0 +1,36 @@
+footer {
+  background-color: #222;
+  color: #eee;
+  padding: 2rem;
+  font-family: Arial, sans-serif;
+}
+
+.footer-columns {
+  display: flex;
+  gap: 2rem;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer-column {
+  flex: 1 1 200px; /* flessibile con larghezza minima */
+}
+
+.footer-column h4 {
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+  border-bottom: 2px solid #555;
+  padding-bottom: 0.5rem;
+}
+
+.footer-column p {
+  margin: 0.25rem 0;
+  line-height: 1.5;
+}
+
+.footer-copyright {
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #aaa;
+}

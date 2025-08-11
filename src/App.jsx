@@ -4,12 +4,14 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import CTABanner from './components/CTABanner/CTABanner'
 import  ImageTextBlock from './components/ImageTextBlock/ImageTextBlock';
+import Footer from './components/Footer/Footer'
 
 function App() {
   return (
     <>
       <CTABanner/>
       <ImageTextBlock />
+      <Footer/>
     </>
   )
 }
