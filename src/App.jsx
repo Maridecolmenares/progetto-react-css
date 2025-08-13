@@ -4,11 +4,11 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import CTABanner from './components/CTABanner/CTABanner';
 import Header from './components/Header/Header';
-import Footer from './components/Footer/Footer'
+import Footer from './components/Footer/Footer';
 import ContactForm from './components/ContactForm/ContactForm';
 import Hero from './components/Hero/Hero';
+import ImageBlock from './components/ImageBlock/ImageBlock';
 import ImageTextBlock from './components/ImageTextBlock/ImageTextBlock';
-import TextBlock from './components/TextBlock/TextBlock';
 
 function App() {
   return (
@@ -18,6 +18,7 @@ function App() {
       <TextBlock />
       <CTABanner />
       <ImageTextBlock />
+      <ImageBlock />
       <Footer/>
       <ContactForm/>
     </>
