@@ -2,14 +2,24 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-import CTABanner from './components/CTABanner/CTABanner'
-import  ImageTextBlock from './components/ImageTextBlock/ImageTextBlock';
+import CTABanner from './components/CTABanner/CTABanner';
+import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer'
+import ContactForm from './components/ContactForm/ContactForm';
+import Hero from './components/Hero/Hero';
+import ImageTextBlock from './components/ImageTextBlock/ImageTextBlock';
+import TextBlock from './components/TextBlock/TextBlock';
 
 function App() {
   return (
     <>
-      <CTABanner/>
+      <Header />
+      <Hero/>
+      <TextBlock title="Chi siamo" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, nesciunt iusto consequatur amet recusandae voluptas nulla qui sed quisquam? Sit enim repellendus tenetur omnis praesentium quia, ratione nihil? Ullam, voluptatibus!" />
+      <CTABanner />
       <ImageTextBlock />
+      <Footer/>
+      <ContactForm/>
     </>
   )
 }
