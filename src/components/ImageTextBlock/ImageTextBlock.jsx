@@ -1,6 +1,6 @@
 import React from "react";
 import './ImageTextBlock.css';
-import premium_photo from './assets/images/premium_photo.avif';
+import premium_photo from '../../assets/images/premium_photo.avif';
 
 const ImageTextBlock = () => {
     return (
