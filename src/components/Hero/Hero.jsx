@@ -1,7 +1,7 @@
 import './Hero.css';
 import heroImg from '../../assets/images/hero_image.jpg'; // шлях відносно файлу
 
-export default function Hero({ title = "Заголовок Головної Секції", subtitle = "Короткий підзаголовок і CTA" }) {
+export default function Hero({ title = "Benvenuti nella nostra azienda", subtitle = "Lorem ipsum dolor sit amet consectetur adipisicing elit. " }) {
     return (
         <section className="hero-section">
             <img src={heroImg} alt="Hero background" className="hero-bg" />
