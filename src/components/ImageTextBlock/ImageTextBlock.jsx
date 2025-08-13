@@ -1,13 +1,13 @@
 import React from "react";
 import './ImageTextBlock.css';
+import premium_photo from '../../assets/images/premium_photo.avif';
 
 const ImageTextBlock = () => {
-    const imageUrl = "https://picsum.photos/400/300";
     return (
         <section className="image-text-block container">
             <div className="image-container">
-                <img src={imageUrl}
-                    alt="Esempio" />
+                <img src={premium_photo}
+                    alt="Panorama del mare con onde leggere e orizzonte azzurro" />
             </div>
             <div className="text-container">
                 <h2>Titolo del blocco</h2>
