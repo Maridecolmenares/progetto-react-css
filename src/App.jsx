@@ -15,7 +15,7 @@ function App() {
     <>
       <Header />
       <Hero/>
-      <TextBlock title="Chi siamo" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, nesciunt iusto consequatur amet recusandae voluptas nulla qui sed quisquam? Sit enim repellendus tenetur omnis praesentium quia, ratione nihil? Ullam, voluptatibus!" />
+      <TextBlock />
       <CTABanner />
       <ImageTextBlock />
       <Footer/>
