@@ -5,8 +5,8 @@ export default function Header() {
     <header className="main-header">
       <nav className="header-nav">
         <a href="#about">About</a>
-        <a href="#prodotto">Prodotto</a>
-        <a href="#contatti">Contatti</a>
+        <a href="#product">Prodotto</a>
+        <a href="#contact">Contatti</a>
       </nav>
       <button className="mobile-menu-button">Menu</button>
     </header>

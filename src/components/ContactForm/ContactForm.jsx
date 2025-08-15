@@ -26,6 +26,7 @@ function ContactForm() {
   };
 
   return (
+    <section id="contact">
     <form onSubmit={handleSubmit}>
       <div className="form-row">
         <input
@@ -53,6 +54,7 @@ function ContactForm() {
         {isSubmitting ? "Invio..." : "Invia"}
       </button>
     </form>
+    </section>
   );
 }
 
