@@ -1,3 +1,20 @@
+/* Sezione contatto larga */
+#contact {
+  padding: 3rem 1rem;        /* spazio interno */
+  margin-top: 3rem;          /* distacco dalla sezione precedente */
+  background: #f9f9f9;       /* sfondo leggero per distinguere la sezione */
+}
+
+/* Form a tutta larghezza */
+#contact form {
+  max-width: 1000px;         /* larghezza massima, resta largo */
+  margin: 0 auto;            /* centra il contenuto */
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Layout dei campi */
 .form-row {
   display: flex;
   gap: 1rem;
@@ -9,29 +26,12 @@
   }
 }
 
+/* Input e textarea */
 input,
-textarea,
-label {
+textarea {
   font-family: inherit;
   font-size: 1rem;
-  padding: 0.5rem;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-input:focus,
-textarea:focus {
-  border-color: #007bff;
-  outline: none;
-}
-
-label {
-  display: block;
-  margin-bottom: 0.25rem;
-  font-weight: 500;
-}
-
-textarea {
-  resize: vertical;
-  min-height: 120px;
+  padding: 0.75rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
 }
