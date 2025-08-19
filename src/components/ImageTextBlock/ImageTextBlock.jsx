@@ -1,10 +1,10 @@
 import React from "react";
 import './ImageTextBlock.css';
-import premium_photo from './assets/images/premium_photo.avif';
+import premium_photo from '../../assets/images/premium_photo.avif';
 
 const ImageTextBlock = () => {
     return (
-        <section className="image-text-block container">
+        <section id="product" className="image-text-block container">
             <div className="image-container">
                 <img src={premium_photo}
                     alt="Panorama del mare con onde leggere e orizzonte azzurro" />
