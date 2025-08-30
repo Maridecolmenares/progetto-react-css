@@ -1,11 +1,16 @@
 .hero-section {
   position: relative;
-  min-height: 60vh;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   overflow: hidden;
+  margin: 0;
+   /* фон */
+  background-size: cover;     /* завжди заповнює */
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 /* фонова картинка */
@@ -14,37 +19,90 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 100%;  /* трохи більше, щоб не було "дірки" при зсуві */
   object-fit: cover;
   z-index: -1;
-  filter: brightness(0.6); /* затемнює фон для кращої читабельності тексту */
+  transition: transform 0.1s linear; /* плавність */
 }
 
-/* контент поверху */
+/* контент */
 .hero-content {
   max-width: 800px;
-  color: #ffffff; /* підходить до затемненого фонового зображення */
+  color: #ffffff;
   padding: 2rem 1rem;
+  font-size: clamp(1rem, 2vw, 1.5rem); /* автоматичне зменшення тексту */
+  padding-top: 50px;
 }
-
 .hero-title {
-  font-size: 2.25rem;
-  margin: 0 0 0.75rem 0;
-  line-height: 1.05;
+  font-size: clamp(2rem, 5vw, 3rem); /* від 2rem до 3rem */
+  margin-bottom: 1rem;
 }
 
-.hero-subtitle {
-  font-size: 1.125rem;
-  margin-bottom: 1.25rem;
-  color: rgba(255,255,255,0.9);
+/* анімації */
+.fade-in {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: opacity 1s ease, transform 1s ease;
 }
 
-/* адаптивність */
-@media (min-width: 768px) {
-  .hero-title {
-    font-size: 3rem;
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-in.visible h1 {
+  animation: slideUp 2.5s ease forwards;
+}
+
+.fade-in.visible p {
+  animation: slideUp 3s ease forwards;
+}
+
+.fade-in.visible a {
+  animation: slideUp 3.5s ease forwards;
+}
+
+/* кнопка */
+.btn-primary {
+  /* position: relative;
+  display: inline-block;
+  padding: 0.8rem 2rem; */
+  font-size: clamp(1,5rem, 3vw, 2rem);
+  font-weight: 600;
+  text-decoration: none;
+  overflow: hidden;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+}
+
+/* underline ефект */
+.btn-primary::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 8px;
+  width: 0%;
+  height: 2px;
+  background: #fff;
+  transition: all 0.4s ease;
+  transform: translateX(-50%);
+}
+
+.btn-primary:hover::after {
+  width: 80%;
+}
+
+/* ключові кадри */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(60px);
   }
-  .hero-subtitle {
-    font-size: 1.25rem;
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

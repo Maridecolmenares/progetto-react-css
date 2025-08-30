@@ -1,17 +1,210 @@
 .text-block {
-  text-align: center;
-  padding: 4rem 1.5rem;
-  max-width: 768px;
+  min-height: 100vh;
+  background: white;
+  color: #244992;
+  padding-top: 20px; /* щоб не заїжджало під header */
+}
+
+/* Контейнер */
+.text-block-content {
+  /* display: flex;
+  justify-content: space-between;
+  align-items: flex-center;
+  max-width: 1400px;
   margin: 0 auto;
+  padding: 20 20px;
+  gap: 40px; */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  max-width: 1400px;
+  margin: 0 auto;
+  gap: 40px;
+  padding: 20px;
 }
 
-.text-block-title {
+/* Текст */
+.text-col {
+  flex: 1;
+  padding-top: 40px;
+}
+.text-col h2 {
   font-size: 2rem;
-  margin-bottom: 1rem;
+}
+.text-col p {
+  line-height: 1.8;
+  font-weight: 400;
+  margin-bottom: 1.5rem;
 }
 
-.text-block-text {
-  font-size: 1.125rem;
-  line-height: 1.6;
-  color: #444;
+/* Анімація тексту */
+.text-col h2,
+.text-col p {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 1s ease;
 }
+.text-col h2.show {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0s;
+}
+.text-col p.show {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.6s;
+}
+
+/* Галерея */
+.image-col {
+  flex: 1; /* трішки ширше */
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 1.5rem;
+}
+
+/* Загальний стиль картинок */
+.gallery-item {
+  flex: 1;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 3px solid #fff;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  opacity: 0;
+  transform: translateY(100px) scale(0.95);
+  transition: all 1s ease;
+}
+
+.gallery-item img {
+  width: 100%;
+  aspect-ratio: 9 / 16; /* тепер вертикальні */
+  object-fit: cover;
+}
+
+/* Центральна більша */
+.gallery-item.large {
+  flex: 1.3; /* центральне більше */
+  transform: translateY(120px) scale(0.95);
+  z-index: 2;
+}
+
+/* Показ при скролі */
+.gallery-item.show {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+.gallery-item.show.large {
+  transition-delay: 1s;
+}
+.gallery-item.show.small {
+  transition-delay: 1.2s;
+}
+
+.underline {
+  justify-self: center;
+  width: 60px;
+  height: 3px;
+  background: #244992;
+  margin-bottom: 1.5rem;
+}
+/* Кнопки */
+.buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.btn {
+  padding: 0.6rem 1.4rem;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn.contact {
+  background: #244992;
+  color: white;
+}
+
+.btn.contact:hover {
+  background: #193673;
+}
+
+/* === Заголовок + підкреслення === */
+.underline {
+  width: 60px;
+  height: 3px;
+  background: #244992;
+  margin-bottom: 1.5rem;
+
+  /* прихована анімація */
+  transform: scaleX(0);
+  transform-origin: left;
+  opacity: 0;
+  transition: all 0.8s ease;
+}
+
+.underline.show {
+  transform: scaleX(1);
+  opacity: 1;
+  transition-delay: 0.3s; /* трохи після h2 */
+}
+
+/* === Кнопки === */
+.buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+.buttons.show {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 1.2s; /* після p */
+}
+
+/* ===== Media для <= 1190px ===== */
+@media (max-width: 1190px) {
+  .text-block-content {
+    grid-template-columns: 1fr; /* тільки 1 колонка */
+  }
+
+  .text-col {
+    order: 1; /* завжди зверху */
+  }
+
+  .image-col {
+    order: 2; /* завжди під текстом */
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+
+  .image-col .gallery-item {
+    max-width: 30%; /* щоб залишались в ряд */
+  }
+}
+
+/* Mobile */
+/* @media (max-width: 768px) {
+  .text-block-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  .image-col {
+    flex-direction: column;
+    align-items: center;
+  }
+  .gallery-item {
+    transform: scale(1);
+    opacity: 1;
+  }
+} */
+

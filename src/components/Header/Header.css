@@ -1,35 +1,152 @@
-.main-header {
-  position: sticky;
+/* Заголовок */
+.header {
+  position: fixed;
   top: 0;
-  z-index: 50;
-  background-color: rgba(255, 255, 255, 0.85);
+  left: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.8);
   backdrop-filter: blur(8px);
+  /* border-bottom: 1px solid #ddd; */
+  z-index: 1000;
+}
+
+.header__container {
+  max-width: 1280px;
+  padding-inline: 15px;
+  margin: 0 auto;
+
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 1rem 1.5rem;
+  min-height: 80px;
+  padding-block: 0px;
+  gap: 15px;
+  justify-content: space-between;
 }
 
-.header-nav a {
-  margin-right: 20px;
-  text-decoration: none;
-  color: #333;
-  font-weight: 600;
+/* Лого */
+.header__logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
-.mobile-menu-button {
-  display: none;
-  background: none;
-  border: none;
+.logo__image {
+  height: 70px;
+}
+
+.logo__title {
   font-size: 1.2rem;
-  cursor: pointer;
+  font-weight: bold;
+  color: #244992;
+}
+.logo__title:hover {
+  color: #1367ca;
 }
 
+/* Навігація */
+.header__nav {
+  flex: 1;
+  margin: 0 2rem;
+}
+
+.menu__list {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu__item a {
+  text-decoration: none;
+  color: #244992;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.menu__item a:hover {
+  color: #1367ca;
+}
+
+/* Кнопка */
+.btn_header {
+  display: inline-block;
+  font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    border-radius: 20px;
+    /* border: 1px solid #1367ca; */
+    transition-duration: 0.3s;
+    color: #244992;
+    text-decoration: none;
+    
+    -webkit-box-shadow: 1px 5px 11px -3px rgba(0,0,0,0.19); 
+box-shadow: 1px 5px 11px -3px rgba(0,0,0,0.19);
+background: #FFFFFF;
+    
+}
+
+.btn_header:hover {
+  transform: translateY(2px);
+    color: #1367ca;
+    /* border-color: #1367ca; */
+}
+
+/* Бургер */
+.burger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  margin-left: 1rem;
+}
+
+.burger span {
+  width: 24px;
+  height: 2px;
+  background: #244992;
+  transition: all 0.3s ease;
+}
+
+/* Бургер → хрестик */
+.burger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.burger.active span:nth-child(2) {
+  opacity: 0;
+}
+.burger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Mobile */
 @media (max-width: 768px) {
-  .header-nav {
+  .menu__list {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.95);
+    border-top: 1px solid #ddd;
+    padding: 1rem 0;
     display: none;
   }
-  .mobile-menu-button {
-    display: block;
+
+  .header__nav.open .menu__list {
+    display: flex;
+  }
+
+  .burger {
+    display: flex;
+  }
+
+  .header__actions .btn_header {
+    display: none;
   }
 }
