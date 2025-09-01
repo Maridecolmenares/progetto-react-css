@@ -1,6 +1,51 @@
-.cta-banner{
-    background-color: #4338ca;
-    color: #ffffff;
-    text-align: center;
-    padding: 4rem 1.5rem;
+.cta-banner {
+  max-width: 1280px;   /* максимум для десктопа */
+  width: 100%;         /* завжди займає всю ширину */
+  margin: 0 auto;
+  padding: 0;
+  background: white;
+}
+
+.slider {
+  position: relative;
+  width: 100%;         /* тепер адаптивно */
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.slides {
+  display: flex;
+  width: 100%;         /* бо 2 банери */
+  animation: slide 8s infinite;
+}
+
+.slide {
+  flex: 0 0 100%;
+}
+
+.slide img {
+  width: 100%;
+  height: auto;        /* висота сама підлаштовується */
+  object-fit: contain; /* картинка вся влізе без обрізання */
+  display: block;
+}
+
+/* Анімація */
+@keyframes slide {
+  0%   { transform: translateX(0%); }
+  40%  { transform: translateX(0%); }
+  50%  { transform: translateX(-100%); }
+  90%  { transform: translateX(-100%); }
+  100% { transform: translateX(0%); }
+}
+
+/* 📱 Адаптив: на мобілці банер не буде величезним */
+@media (max-width: 768px) {
+  .cta-banner {
+    max-width: 100%;
+  }
+
+  .slide img {
+    object-fit: contain; /* можна лишити contain */
+  }
 }

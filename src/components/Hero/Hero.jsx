@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 import "./Hero.css";
-import heroImg from "../../assets/images/hero_3.png";
+import heroImg from "../../assets/images/hero_4.png";
 
 export default function Hero({
   title = "Benvenuti nella nostra azienda",
@@ -43,16 +43,17 @@ export default function Hero({
   }, []);
 
   return (
-    <section id="home" className="hero-section">
-      {/* Фон з паралаксом */}
-      <img ref={bgRef} src={heroImg} alt="Hero background" className="hero-bg" />
+    <section
+  id="home"
+  className="hero-section"
+  style={{ backgroundImage: `url(${heroImg})` }}
+>
+  <div ref={contentRef} className="hero-content container fade-in">
+    <h1 className="hero-title">{title}</h1>
+    <p className="hero-subtitle">{subtitle}</p>
+    <a href="#contact" className="btn btn-primary">Contattaci</a>
+  </div>
+</section>
 
-      {/* Контент з поетапною появою */}
-      <div ref={contentRef} className="hero-content container fade-in">
-        <h1 className="hero-title"> {title} </h1>
-        <p className="hero-subtitle"> {subtitle} </p>
-        <a href="#contact" className="btn btn-primary">Contattaci</a>
-      </div>
-    </section>
   );
 }

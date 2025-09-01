@@ -1,5 +1,5 @@
 import { useState } from "react";
-import './ContactForm.css';
+import "./ContactForm.css";
 
 function ContactForm() {
   const [formData, setFormData] = useState({
@@ -21,39 +21,46 @@ function ContactForm() {
     e.preventDefault();
     setIsSubmitting(true);
     console.log("Dati inviati:", formData);
-    // qui potresti aggiungere la logica per l'invio dei dati
-    setIsSubmitting(false);
+    setTimeout(() => setIsSubmitting(false), 1500); // імітація відправки
   };
 
   return (
     <section id="contact">
-    <form onSubmit={handleSubmit}>
-      <div className="form-row">
-        <input
-          type="text"
-          name="name"
-          placeholder="Nome"
-          value={formData.name}
+      <h2 className="contact-title">Contattaci</h2>
+      <p className="contact-subtitle">
+        Hai domande o vuoi prenotare un tavolo? Scrivici!
+      </p>
+      <form onSubmit={handleSubmit}>
+        <div className="form-row">
+          <input
+            type="text"
+            name="name"
+            placeholder="Nome"
+            value={formData.name}
+            onChange={handleChange}
+            required
+          />
+          <input
+            type="email"
+            name="email"
+            placeholder="Email"
+            value={formData.email}
+            onChange={handleChange}
+            required
+          />
+        </div>
+        <textarea
+          name="message"
+          placeholder="Messaggio"
+          value={formData.message}
           onChange={handleChange}
+          rows="5"
+          required
         />
-        <input
-          type="email"
-          name="email"
-          placeholder="Email"
-          value={formData.email}
-          onChange={handleChange}
-        />
-      </div>
-      <textarea
-        name="message"
-        placeholder="Messaggio"
-        value={formData.message}
-        onChange={handleChange}
-      />
-      <button type="submit" disabled={isSubmitting}>
-        {isSubmitting ? "Invio..." : "Invia"}
-      </button>
-    </form>
+        <button className="btn-form" type="submit" disabled={isSubmitting}>
+          {isSubmitting ? "Invio..." : "Invia"}
+        </button>
+      </form>
     </section>
   );
 }
