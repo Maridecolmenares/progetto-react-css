@@ -3,6 +3,7 @@
   background: white;
   color: #244992;
   padding-top: 70px; /* щоб не заїжджало під header */
+  padding-bottom: 50px;
 }
 
 /* Контейнер */

@@ -3,6 +3,7 @@
   padding: 4rem 1rem;
   background-color: white;
   text-align: center;
+  height: 100vh;
 }
 
 /* Заголовки */
@@ -93,3 +94,17 @@ textarea:focus {
   background: #bbb;
   cursor: not-allowed;
 }
+
+/* ====== Ефект появи ====== */
+.fade-in-section {
+  opacity: 0;
+  
+  transition: opacity 1.2s ease-out;
+  transition-delay: 0.3s; /* невелика пауза */
+}
+
+.fade-in-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+

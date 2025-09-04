@@ -1,5 +1,4 @@
 .cta-banner {
-  max-width: 1280px;   /* максимум для десктопа */
   width: 100%;         /* завжди займає всю ширину */
   margin: 0 auto;
   padding: 0;

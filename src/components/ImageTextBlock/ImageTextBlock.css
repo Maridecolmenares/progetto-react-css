@@ -4,6 +4,7 @@
   padding: 4rem 1rem;
   text-align: center;
   background-color: white;
+  margin-bottom: 50px;
 }
 
 .section-title {
@@ -108,6 +109,18 @@
 .swiper-button-next:hover,
 .swiper-button-prev:hover {
   color: #1367ca !important;
+}
+
+/* ==== Плавна поява секції ==== */
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 2s ease-out, transform 2s ease-out;
+}
+
+.fade-in-section.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* ====== АДАПТИВ ====== */

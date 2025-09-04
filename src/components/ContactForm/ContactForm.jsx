@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import "./ContactForm.css";
 
 function ContactForm() {
@@ -8,6 +8,24 @@ function ContactForm() {
     message: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
+
+  // 👇 для fade-in
+  const sectionRef = useRef(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          setIsVisible(true);
+          observer.disconnect(); // один раз
+        }
+      },
+      { threshold: 0.4 } // секція з’явиться, коли 40% видно
+    );
+    if (sectionRef.current) observer.observe(sectionRef.current);
+    return () => observer.disconnect();
+  }, []);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -21,11 +39,15 @@ function ContactForm() {
     e.preventDefault();
     setIsSubmitting(true);
     console.log("Dati inviati:", formData);
-    setTimeout(() => setIsSubmitting(false), 1500); // імітація відправки
+    setTimeout(() => setIsSubmitting(false), 1500);
   };
 
   return (
-    <section id="contact">
+    <section
+      id="contact"
+      ref={sectionRef}
+      className={`fade-in-section ${isVisible ? "visible" : ""}`}
+    >
       <h2 className="contact-title">Contattaci</h2>
       <p className="contact-subtitle">
         Hai domande o vuoi prenotare un tavolo? Scrivici!

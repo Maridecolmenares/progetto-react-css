@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 import "./Hero.css";
-import heroImg from "../../assets/images/hero_4.png";
+import heroImg from "../../assets/images/hero-5.png";
 
 export default function Hero({
   title = "Benvenuti nella nostra azienda",

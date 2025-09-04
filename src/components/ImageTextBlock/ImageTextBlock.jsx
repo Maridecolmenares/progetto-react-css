@@ -1,3 +1,4 @@
+import { useEffect, useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import "swiper/css";
@@ -12,46 +13,36 @@ import dish4 from "../../assets/images/dish4.png";
 import dish5 from "../../assets/images/dish5.png";
 
 const dishes = [
-  {
-    id: 1,
-    name: "Paella",
-    desc: "Riso, zafferano, gamberi e cozze.",
-    price: "€12",
-    img: dish1,
-  },
-  {
-    id: 2,
-    name: "Tacos",
-    desc: "Carne, verdure fresche e salsa piccante.",
-    price: "€8",
-    img: dish2,
-  },
-  {
-    id: 3,
-    name: "Ceviche",
-    desc: "Pesce fresco marinato con lime.",
-    price: "€10",
-    img: dish3,
-  },
-  {
-    id: 4,
-    name: "Gazpacho",
-    desc: "Zuppa fredda di pomodoro e verdure.",
-    price: "€7",
-    img: dish4,
-  },
-  {
-    id: 5,
-    name: "Churros",
-    desc: "Dolce fritto con zucchero e cioccolato.",
-    price: "€6",
-    img: dish5,
-  },
+  { id: 1, name: "Paella", desc: "Riso, zafferano, gamberi e cozze.", price: "€12", img: dish1 },
+  { id: 2, name: "Tacos", desc: "Carne, verdure fresche e salsa piccante.", price: "€8", img: dish2 },
+  { id: 3, name: "Ceviche", desc: "Pesce fresco marinato con lime.", price: "€10", img: dish3 },
+  { id: 4, name: "Gazpacho", desc: "Zuppa fredda di pomodoro e verdure.", price: "€7", img: dish4 },
+  { id: 5, name: "Churros", desc: "Dolce fritto con zucchero e cioccolato.", price: "€6", img: dish5 },
 ];
 
 export default function ImageTextBlock() {
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    const section = sectionRef.current;
+    if (!section) return;
+
+    const io = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          section.classList.add("visible");
+          io.disconnect();
+        }
+      },
+      { threshold: 0.5 }
+    );
+
+    io.observe(section);
+    return () => io.disconnect();
+  }, []);
+
   return (
-    <section className="cards-section">
+    <section ref={sectionRef} className="cards-section fade-in-section">
       <h2 className="section-title">I nostri piatti</h2>
       <Swiper
         modules={[Navigation]}
@@ -61,13 +52,8 @@ export default function ImageTextBlock() {
         centeredSlides={true}
         loop={true}
         breakpoints={{
-          0: {      // мобільні
-            slidesPerView: 1,
-            centeredSlides: true,
-          },
-          768: {    // планшети і вище
-            slidesPerView: 3,
-          }
+          0: { slidesPerView: 1, centeredSlides: true },
+          768: { slidesPerView: 3 },
         }}
         className="mySwiper"
       >

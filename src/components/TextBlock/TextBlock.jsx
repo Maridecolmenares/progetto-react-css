@@ -16,7 +16,7 @@ export default function TextBlock() {
           observer.disconnect();
         }
       },
-      { threshold: 0.3 }
+      { threshold: 0.5 }
     );
     if (sectionRef.current) observer.observe(sectionRef.current);
 
