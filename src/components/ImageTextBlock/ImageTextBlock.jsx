@@ -15,14 +15,57 @@ import dish6 from "../../assets/images/dish-6.png";
 import dish7 from "../../assets/images/dish7.jpg";
 
 const dishes = [
-  { id: 1, name: "Ceviche de pescado", desc: "Riso, zafferano, gamberi e cozze.", price: "€12", img: dish1 },
-  { id: 2, name: "Ceviche de camaron", desc: "Carne, verdure fresche e salsa piccante.", price: "€8", img: dish2 },
-  { id: 3, name: "Tacos de camaron", desc: "Pesce fresco marinato con lime.", price: "€10", img: dish3 },
-  { id: 4, name: "Tacos de pescado", desc: "Zuppa fredda di pomodoro e verdure.", price: "€7", img: dish4 },
-  { id: 5, name: "Tacos gobernador", desc: "Dolce fritto con zucchero e cioccolato.", price: "€6", img: dish5 },
-  { id: 6, name: "Tacos de pulpo", desc: "Dolce fritto con zucchero e cioccolato.", price: "€6", img: dish6 },
-  { id: 7, name: "Cocktail de marisco", desc: "Dolce fritto con zucchero e cioccolato.", price: "€6", img: dish7 },
+  { 
+    id: 1, 
+    name: "Ceviche de pescado", 
+    desc: "Pesce bianco marinato con lime, cipolla rossa, coriandolo, pomodoro e avocado, servito con tostada di mais croccante.", 
+    price: "€14", 
+    img: dish1 
+  },
+  { 
+    id: 2, 
+    name: "Ceviche de camaron", 
+    desc: "Gamberi freschi marinati al lime con avocado, cipolla rossa, coriandolo e pomodoro, accompagnati da tostada di mais croccante.", 
+    price: "€15", 
+    img: dish2 
+  },
+  { 
+    id: 3, 
+    name: "Tacos de camaron", 
+    desc: "Tortillas di mais, gamberi croccanti fritti in pastella, insalata, guacamole, pico de gallo e salsa bianca.", 
+    price: "€12", 
+    img: dish3 
+  },
+  { 
+    id: 4, 
+    name: "Tacos de pescado", 
+    desc: "Tortillas di mais ripiene di filetto di pesce fritto in pastella, guacamole, cavolo viola e salsa cremosa allo yogurt-lime.", 
+    price: "€11", 
+    img: dish4 
+  },
+  { 
+    id: 5, 
+    name: "Tacos gobernador", 
+    desc: "Tacos con gamberi e formaggio fuso, peperoni e cipolla saltati in padella.", 
+    price: "€13", 
+    img: dish5 
+  },
+  { 
+    id: 6, 
+    name: "Tacos de pulpo", 
+    desc: "Polpo grigliato, guacamole fresco e salsa a base di chipotle in tortilla di mais.", 
+    price: "€14", 
+    img: dish6 
+  },
+  { 
+    id: 7, 
+    name: "Cocktail de marisco", 
+    desc: "Gamberi e verdure serviti in salsa rossa saporita di pomodoro piccante con lime.", 
+    price: "€16", 
+    img: dish7 
+  },
 ];
+
 
 export default function ImageTextBlock() {
   const sectionRef = useRef(null);

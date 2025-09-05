@@ -31,10 +31,9 @@ export default function ImageBlock() {
       style={{ backgroundImage: `url(${blockImage})` }}
     >
       <div ref={contentRef} className="image-block-content fade-in">
-        <h2 className="image-block-title">About Our Restaurant</h2>
+        <h2 className="image-block-title">Ingredienti veri, freschi e selezionati</h2>
         <p className="image-block-text">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          Crediamo che la qualità nasca dalla scelta degli ingredienti. Per questo utilizziamo frutti di mare freschi del Mediterraneo, spezie profumate e la vera farina di mais messicana per preparare tortillas autentiche, come quelle di casa.
         </p>
       </div>
     </section>

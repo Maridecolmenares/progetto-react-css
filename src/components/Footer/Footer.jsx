@@ -34,7 +34,7 @@ function Footer() {
         >
           <img src={logo} alt="Sabor del Mar Logo" className="footer-logo" />
           <h3 className="company-name">Sabor del Mar</h3>
-          <p>Information about the company or website.</p>
+          <p>Mexican seafood restaurant.</p>
         </div>
 
         <div

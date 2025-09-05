@@ -51,7 +51,7 @@ export default function Hero({
   <div ref={contentRef} className="hero-content container fade-in">
     <h1 className="hero-title">{title}</h1>
     <p className="hero-subtitle">{subtitle}</p>
-    <a href="#product" className="btn btn-primary">Scopri il menù</a>
+    <a href="#product" className="btn btn-hero">Scopri il menù</a>
   </div>
 </section>
 
