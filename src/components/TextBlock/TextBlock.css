@@ -2,8 +2,8 @@
   min-height: 100vh;
   background: white;
   color: #244992;
-  padding-top: 70px; /* щоб не заїжджало під header */
-  padding-bottom: 50px;
+   margin-top: 70px; 
+  /*padding-bottom: 50px; */
 }
 
 /* Контейнер */
@@ -23,6 +23,16 @@
   gap: 40px;
   padding: 20px;
 }
+/* .text-block-list {
+  display: inline-block; 
+  text-align: left;      
+  margin: 0 auto;        
+  padding-left: 1.2rem;  
+      line-height: 1.8;
+    font-weight: 400;
+    margin-bottom: 1.5rem;
+} */
+
 
 /* Текст */
 .text-col {

@@ -3,8 +3,8 @@ import "./Hero.css";
 import heroImg from "../../assets/images/hero-5.png";
 
 export default function Hero({
-  title = "Benvenuti nella nostra azienda",
-  subtitle = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+  title = "Il Messico che non ti aspetti, a due passi dal Mediterraneo",
+  subtitle = "Benvenuti nel nostro ristorante: un viaggio di sapori che unisce la tradizione messicana e la freschezza dei frutti di mare del Mediterraneo."
 }) {
   const bgRef = useRef(null);
   const contentRef = useRef(null);
@@ -51,7 +51,7 @@ export default function Hero({
   <div ref={contentRef} className="hero-content container fade-in">
     <h1 className="hero-title">{title}</h1>
     <p className="hero-subtitle">{subtitle}</p>
-    <a href="#contact" className="btn btn-primary">Contattaci</a>
+    <a href="#product" className="btn btn-primary">Scopri il menù</a>
   </div>
 </section>
 

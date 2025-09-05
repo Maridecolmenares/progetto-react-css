@@ -17,7 +17,7 @@ function Footer() {
           }
         });
       },
-      { threshold: 0.3 }
+      { threshold: 0.5 }
     );
 
     colRefs.current.forEach((el) => el && observer.observe(el));

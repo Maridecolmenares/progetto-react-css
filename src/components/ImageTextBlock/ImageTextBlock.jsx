@@ -11,13 +11,17 @@ import dish2 from "../../assets/images/dish2.png";
 import dish3 from "../../assets/images/dish3.png";
 import dish4 from "../../assets/images/dish4.png";
 import dish5 from "../../assets/images/dish5.png";
+import dish6 from "../../assets/images/dish-6.png";
+import dish7 from "../../assets/images/dish7.jpg";
 
 const dishes = [
-  { id: 1, name: "Paella", desc: "Riso, zafferano, gamberi e cozze.", price: "€12", img: dish1 },
-  { id: 2, name: "Tacos", desc: "Carne, verdure fresche e salsa piccante.", price: "€8", img: dish2 },
-  { id: 3, name: "Ceviche", desc: "Pesce fresco marinato con lime.", price: "€10", img: dish3 },
-  { id: 4, name: "Gazpacho", desc: "Zuppa fredda di pomodoro e verdure.", price: "€7", img: dish4 },
-  { id: 5, name: "Churros", desc: "Dolce fritto con zucchero e cioccolato.", price: "€6", img: dish5 },
+  { id: 1, name: "Ceviche de pescado", desc: "Riso, zafferano, gamberi e cozze.", price: "€12", img: dish1 },
+  { id: 2, name: "Ceviche de camaron", desc: "Carne, verdure fresche e salsa piccante.", price: "€8", img: dish2 },
+  { id: 3, name: "Tacos de camaron", desc: "Pesce fresco marinato con lime.", price: "€10", img: dish3 },
+  { id: 4, name: "Tacos de pescado", desc: "Zuppa fredda di pomodoro e verdure.", price: "€7", img: dish4 },
+  { id: 5, name: "Tacos gobernador", desc: "Dolce fritto con zucchero e cioccolato.", price: "€6", img: dish5 },
+  { id: 6, name: "Tacos de pulpo", desc: "Dolce fritto con zucchero e cioccolato.", price: "€6", img: dish6 },
+  { id: 7, name: "Cocktail de marisco", desc: "Dolce fritto con zucchero e cioccolato.", price: "€6", img: dish7 },
 ];
 
 export default function ImageTextBlock() {
@@ -42,7 +46,7 @@ export default function ImageTextBlock() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="cards-section fade-in-section">
+    <section id="product" ref={sectionRef} className="cards-section fade-in-section">
       <h2 className="section-title">I nostri piatti</h2>
       <Swiper
         modules={[Navigation]}
