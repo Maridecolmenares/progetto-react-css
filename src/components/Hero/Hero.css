@@ -15,6 +15,14 @@
   background-attachment: fixed;
 }
 
+.hero-section::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.1); /* регулюй прозорість */
+  z-index: 1;
+}
+
 
 /* фонова картинка */
 .hero-bg {
@@ -32,6 +40,8 @@
 }
 /* контент */
 .hero-content {
+  position: relative;
+  z-index: 2;
   max-width: 800px;
   color: #ffffff;
   padding: 2rem 1rem;

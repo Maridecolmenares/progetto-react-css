@@ -1,9 +1,11 @@
 /* Секція */
 #contact {
-  padding: 2rem 2rem;
+  padding-inline: 2rem;
   background-color: white;
   text-align: center;
-  /* height: 100vh; */
+  /* height: 100vh;  */
+  padding-top: 6rem;
+  padding-bottom: 6rem;
 }
 
 /* Заголовки */
