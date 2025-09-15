@@ -29,20 +29,20 @@ export default function TextBlock() {
         {/* Текст */}
         <div className="text-col">
           <h2 className={visible ? "show" : ""}>La nostra storia:<br /> una passione che nasce dal cuore</h2>
-<div className={`underline ${visible ? "show" : ""}`}></div>
-<p className={visible ? "show" : ""}>
+          <div className={`underline ${visible ? "show" : ""}`}></div>
+          <p className={visible ? "show" : ""}>
             El Sabor del Mar nasce da un sogno condiviso: portare in tavola la vera cucina messicana, preparata con i frutti di mare freschi del Mediterraneo.
-Abbiamo unito la ricchezza delle tradizioni culinarie del Messico con l’autenticità degli ingredienti locali, per offrirti un’esperienza unica, piena di colori, profumi e sapori.
-</p>
-{/* <ul className="text-block-list">
+            Abbiamo unito la ricchezza delle tradizioni culinarie del Messico con l’autenticità degli ingredienti locali, per offrirti un’esperienza unica, piena di colori, profumi e sapori.
+          </p>
+          {/* <ul className="text-block-list">
   <li>Tacos di pesce e gamberi, ceviche e cocktails di mare preparati come in Messico</li>
   <li>Ingredienti freschi e genuini, lavorati ogni giorno con passione</li>
   <li>Un’atmosfera accogliente che ti farà sentire in viaggio dall’Italia al Messico</li>
 </ul> */}
-          
+
           <div className={`buttons ${visible ? "show" : ""}`}>
-  <a href="#contact" className="btn contact">Prenota ora</a>
-</div>
+            <a href="#contact" className="btn contact">Prenota ora</a>
+          </div>
         </div>
 
         {/* Галерея */}

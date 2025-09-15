@@ -8,11 +8,11 @@ export default function Header() {
   return (
     <header className="header">
       <div className="header__container">
-        
+
         {/* Лого */}
         <div className="header__logo">
           <img src={headerLogo} alt="Logo" className="logo__image" />
-          <a  href="#"><span className="logo__title">Sabor del Mar</span></a>
+          <a href="#"><span className="logo__title">Sabor del Mar</span></a>
         </div>
 
         {/* Навігація */}

@@ -33,6 +33,7 @@
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
   transition: transform 0.4s ease;
   overflow: visible; /* дозволяє картинці виступати */
+  min-height: 200px;
 }
 
 .card.active {
@@ -71,6 +72,7 @@
   font-size: 0.95rem;
   margin: 0.5rem 0 1rem;
   color: #555;
+  min-height: 100px;
 }
 
 .card-footer {

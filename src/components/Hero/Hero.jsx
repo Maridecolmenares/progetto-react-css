@@ -11,16 +11,16 @@ export default function Hero({
 
   // ПАРАЛАКС фону
   useEffect(() => {
-  const handleScroll = () => {
-    if (bgRef.current) {
-      const rect = bgRef.current.parentElement.getBoundingClientRect();
-      const offset = rect.top * 0.35; // коефіцієнт ефекту
-      bgRef.current.style.transform = `translateY(${offset}px)`;
-    }
-  };
-  window.addEventListener("scroll", handleScroll, { passive: true });
-  return () => window.removeEventListener("scroll", handleScroll);
-}, []);
+    const handleScroll = () => {
+      if (bgRef.current) {
+        const rect = bgRef.current.parentElement.getBoundingClientRect();
+        const offset = rect.top * 0.35; // коефіцієнт ефекту
+        bgRef.current.style.transform = `translateY(${offset}px)`;
+      }
+    };
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
 
   // ПОЕТАПНА поява контенту (h1 -> p -> btn)
@@ -44,16 +44,16 @@ export default function Hero({
 
   return (
     <section
-  id="home"
-  className="hero-section"
-  style={{ backgroundImage: `url(${heroImg})` }}
->
-  <div ref={contentRef} className="hero-content container fade-in">
-    <h1 className="hero-title">{title}</h1>
-    <p className="hero-subtitle">{subtitle}</p>
-    <a href="#product" className="btn btn-hero">Scopri il menù</a>
-  </div>
-</section>
+      id="home"
+      className="hero-section"
+      style={{ backgroundImage: `url(${heroImg})` }}
+    >
+      <div ref={contentRef} className="hero-content container fade-in">
+        <h1 className="hero-title">{title}</h1>
+        <p className="hero-subtitle">{subtitle}</p>
+        <a href="#product" className="btn btn-hero">Scopri il menù</a>
+      </div>
+    </section>
 
   );
 }
